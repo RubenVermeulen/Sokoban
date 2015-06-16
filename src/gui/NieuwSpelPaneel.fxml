@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <GridPane fx:id="gpSpelbord" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="320.0" prefWidth="320.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="32.0" prefWidth="32.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </left>
+   <right>
+      <GridPane prefWidth="250.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnResetSpelbord" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetSpelbordOnAction" prefHeight="40.0" text="Reset spelbord" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="15.0" right="15.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnAnnuleer" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnAnnuleerOnAction" prefHeight="40.0" text="Annuleer" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="15.0" right="15.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnAanmaken" layoutX="25.0" layoutY="225.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetSpelbordOnAction" prefHeight="40.0" text="Aanmaken" GridPane.columnSpan="4" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" right="15.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnVeld" maxHeight="40.0" maxWidth="40.0" mnemonicParsing="false" onAction="#btnVeldOnAction" text="V" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnMannetje" maxHeight="40.0" maxWidth="40.0" mnemonicParsing="false" onAction="#btnMannetjeOnAction" text="M" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnKist" maxHeight="40.0" maxWidth="40.0" mnemonicParsing="false" onAction="#btnKistOnAction" text="K" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnDoel" maxHeight="40.0" maxWidth="40.0" mnemonicParsing="false" onAction="#btnDoelOnAction" text="D" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="lblError" text="Error message" textFill="RED" GridPane.columnSpan="4" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </right>
+   <top>
+      <Label fx:id="lblTitel" text="Spelbord aanmaken" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="15.0" top="15.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+</fx:root>
